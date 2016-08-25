@@ -1,13 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
+<?php
+	//$db = mysqli_connect('hostname','username','password','databasename');
+	$db = mysql_connect('localhost', 'root', 'may121996', 'summies');
+	$sql = "SELECT * FROM summiesOrders";
+	$orders = mysql_query($sql);
+	?>
 
-</head>
-<body>
+	<html>
+	<head>
 
-<h1>Summies Web App Companion</h1>
+	</head>
+	<body>
+
+	<h1>Summies Web App Companion</h1>
+	<table width="600" border="1" cellpadding="1" cellspacing="1">
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Cancelled</th>
+			<th>Executing</th>
+			<th>Completing</th>
+		</tr>
+
+		<?php 
+		while($submission = mysql_fetch_assoc($orders)) {
+			echo "<tr>";
+			echo "<td>" . $submission['id'] . "</td>";
+			echo "</tr>";
+		}
+
+	?>
 
 
-
-</body>
-</html>
+	</table>
+	</body>
+	</html>
