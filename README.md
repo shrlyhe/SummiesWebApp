@@ -11,6 +11,8 @@ Web companion for Summies iOS app
 - [ ] Display buttons (Cancel, Executing, Completed)
 - [ ] Button functionality 
 
+View it here: https://summies-web-app.herokuapp.com/index.html
+
 
 
 
